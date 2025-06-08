@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects – Vedika Baradwaj</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Spectral:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Spectral', serif;
+      background-color: #fdfdfd;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      margin-top: 10vh;
+      font-size: 2em;
+      line-height: 1.5;
+      font-family: 'Instrument Serif', serif;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+    nav {
+      margin-top: 1em;
+      font-family: 'Spectral', serif;
+      letter-spacing: -0.3px;
+      font-size: 0.5em;
+    }
+    nav a {
+      margin: 0 0.5em;
+      text-decoration: none;
+      color: #000;
+      font-weight: 400;
+      border-bottom: 1px solid #ccc;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #800000;
+    }
+    nav span.current {
+      margin: 0 0.5em;
+      text-decoration: none;
+      color: #000;
+      font-weight: 400;
+      border-bottom: 1px solid #ccc;
+      cursor: default;
+    }
+    section {
+      max-width: 800px;
+      margin: 4em auto;
+      padding: 0 1em;
+      text-align: left;
+    }
+    .project {
+      margin-bottom: 1.5em;
+      border-top: 1px solid #ccc;
+    }
+    .project summary {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.3em;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 0.5em 0;
+      list-style: none;
+      position: relative;
+    }
+    .project summary::-webkit-details-marker {
+      display: none;
+    }
+    .project summary::before {
+      content: '\25B6';
+      font-size: 0.4em;
+      color: #666;
+      display: inline-block;
+      margin-right: 0.6em;
+      transition: transform 0.3s ease;
+    }
+    details[open] summary::before {
+      transform: rotate(90deg);
+    }
+    .content {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.6s ease, opacity 0.6s ease;
+    }
+    details[open] .content {
+      opacity: 1;
+      max-height: 500px;
+    }
+    .content p {
+      margin-top: 0.5em;
+      font-size: 1em;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p>projects</p>
+    <nav>
+      <a href="index.html">home</a> |
+      <a href="work.html">work</a> |
+      <span class="current">projects</span> |
+      <a href="https://vedikabaradwaj.substack.com" target="_blank">substack</a> |
+      <a href="gallery.html">gallery</a>
+    </nav>
+  </header>
+
+  <section>
+    <details class="project">
+      <summary>How did the Chicago immigrant influx of 2023 affect the labor force?</summary>
+      <div class="content">
+        <p>An econometric difference-in-differences study measuring wage and employment effects across native and migrant labor cohorts in Chicago following the 2023 migrant arrival.</p>
+      </div>
+    </details>
+
+    <details class="project">
+      <summary>Developing a Member Acquisition and Retention Strategy for The Support Network</summary>
+      <div class="content">
+        <p>A nonprofit consulting deliverable produced in collaboration with campusCatalyst, focused on addressing student membership decline and improving organizational sustainability.</p>
+      </div>
+    </details>
+
+    <details class="project">
+      <summary>What drives UPI adoption by small-scale merchants in a Mumbai suburb?</summary>
+      <div class="content">
+        <p>Primary research including surveys and interviews to evaluate behavioral, economic, and infrastructural factors influencing UPI use over cash by merchants and consumers.</p>
+      </div>
+    </details>
+  </section>
+</body>
+</html>

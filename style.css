@@ -1,29 +1,29 @@
 /* ── Computer Modern (KaTeX_Main) — local, no CDN needed ── */
 @font-face {
   font-family: 'CMU';
-  src: url('fonts/KaTeX_Main-Regular.woff2') format('woff2'),
-       url('fonts/KaTeX_Main-Regular.woff') format('woff');
+  src: url('KaTeX_Main-Regular.woff2') format('woff2'),
+       url('KaTeX_Main-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'CMU';
-  src: url('fonts/KaTeX_Main-Italic.woff2') format('woff2'),
-       url('fonts/KaTeX_Main-Italic.woff') format('woff');
+  src: url('KaTeX_Main-Italic.woff2') format('woff2'),
+       url('KaTeX_Main-Italic.woff') format('woff');
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: 'CMU';
-  src: url('fonts/KaTeX_Main-Bold.woff2') format('woff2'),
-       url('fonts/KaTeX_Main-Bold.woff') format('woff');
+  src: url('KaTeX_Main-Bold.woff2') format('woff2'),
+       url('KaTeX_Main-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'CMU';
-  src: url('fonts/KaTeX_Main-BoldItalic.woff2') format('woff2'),
-       url('fonts/KaTeX_Main-BoldItalic.woff') format('woff');
+  src: url('KaTeX_Main-BoldItalic.woff2') format('woff2'),
+       url('KaTeX_Main-BoldItalic.woff') format('woff');
   font-weight: bold;
   font-style: italic;
 }

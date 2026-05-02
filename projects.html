@@ -4,28 +4,68 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects – Vedika Baradwaj</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://latex.vercel.app/style.css">
+  <style>
+    body { background: #f5f0e8; }
+    nav a { color: inherit; }
+    nav a:hover { text-decoration: underline; }
+
+    /* Accordion */
+    .project { border-top: 1px solid #999; }
+    .project:last-child { border-bottom: 1px solid #999; }
+
+    .project summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 0.7em 0;
+      display: flex;
+      align-items: baseline;
+      gap: 0.5em;
+    }
+    .project summary::-webkit-details-marker { display: none; }
+    .project summary::before {
+      content: '▶';
+      font-size: 0.5em;
+      color: #999;
+      flex-shrink: 0;
+      transition: transform 0.25s ease;
+      display: inline-block;
+    }
+    details[open] summary::before { transform: rotate(90deg); color: #333; }
+    .project summary:hover { opacity: 0.7; }
+
+    .project-content {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.3s ease;
+    }
+    details[open] .project-content { max-height: 300px; opacity: 1; }
+    .project-content p {
+      font-style: italic;
+      color: #444;
+      padding-bottom: 0.9em;
+      font-size: 0.95em;
+    }
+  </style>
 </head>
 <body>
-  <header class="page-header">
-    <span class="page-title">projects</span>
-    <nav>
-      <a href="index.html">home</a>
-      <span class="sep">·</span>
-      <a href="work.html">work</a>
-      <span class="sep">·</span>
-      <span class="current">projects</span>
-      <span class="sep">·</span>
-      <a href="https://vedikabaradwaj.substack.com" target="_blank">substack</a>
-      <span class="sep">·</span>
-      <a href="gallery.html">gallery</a>
-    </nav>
-  </header>
+  <article>
+    <h1>Projects</h1>
+    <p class="author">
+      <a href="index.html">← Vedika Baradwaj</a>
+    </p>
 
-  <main>
+    <nav style="text-align:center; margin-bottom: 2em;">
+      <a href="index.html">Home</a> &ensp;·&ensp;
+      <a href="work.html">Work</a> &ensp;·&ensp;
+      <strong>Projects</strong> &ensp;·&ensp;
+      <a href="https://vedikabaradwaj.substack.com" target="_blank">Substack</a> &ensp;·&ensp;
+      <a href="gallery.html">Gallery</a>
+    </nav>
 
     <details class="project">
-      <summary>How will Illinois's Tier 2 Pension reform affect public labor force retention? <em style="font-size:0.82em; color:#999; font-family:'CMU Serif',Georgia,serif;">(ongoing)</em></summary>
+      <summary>How will Illinois's Tier 2 Pension reform affect public labor force retention? <em style="font-size:0.85em; color:#888;">(ongoing)</em></summary>
       <div class="project-content">
         <p>A study in collaboration with the Centre for Tax and Budget Accountability on the labor force implications of proposed changes to the Tier 2 scheme under Illinois Senate Bill 0002.</p>
       </div>
@@ -66,6 +106,6 @@
       </div>
     </details>
 
-  </main>
+  </article>
 </body>
 </html>

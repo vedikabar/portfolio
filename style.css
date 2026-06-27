@@ -337,6 +337,55 @@ body {
   to   { transform: scaleY(1); }
 }
 
+/* ── Socials page ── */
+.socials-wrap {
+  min-height: 100vh;
+  padding-top: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.socials-grid {
+  display: flex;
+  gap: 3.5em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65em;
+  text-decoration: none;
+  color: var(--ink);
+  transition: color 0.2s, transform 0.22s;
+}
+
+.social-item:hover {
+  color: var(--muted);
+  transform: translateY(-4px);
+}
+
+.social-item svg {
+  display: block;
+}
+
+.social-label {
+  font-size: 0.75em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.social-item:hover .social-label {
+  color: var(--light);
+}
+
 /* ── Responsive ── */
 @media (max-width: 700px) {
   .site-nav { padding: 0 1.5em; }

@@ -67,16 +67,15 @@ body {
   z-index: 100;
 }
 
-.nav-name {
-  font-size: 0.93em;
-  font-weight: bold;
-  letter-spacing: 0.01em;
-  text-decoration: none;
+.nav-home {
+  display: flex;
+  align-items: center;
   color: var(--ink);
+  text-decoration: none;
   transition: color 0.2s;
 }
 
-.nav-name:hover { color: var(--muted); }
+.nav-home:hover { color: var(--muted); }
 
 .nav-links {
   display: flex;
@@ -219,65 +218,47 @@ body {
 
 .job-desc li { margin-bottom: 0.2em; }
 
-/* ── Projects accordion ── */
-.project {
+/* ── Projects flat list ── */
+.project-item {
+  padding: 1.5em 0;
   border-bottom: var(--rule);
 }
 
-.project:first-child {
+.project-item:first-child {
   border-top: var(--rule);
 }
 
-.project summary {
-  font-size: 0.93em;
-  cursor: pointer;
-  padding: 0.9em 0;
-  list-style: none;
+.project-header {
   display: flex;
-  align-items: baseline;
-  gap: 0.6em;
-  color: var(--ink);
-  transition: color 0.2s;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.2em;
+  margin-bottom: 0.5em;
 }
 
-.project summary::-webkit-details-marker { display: none; }
+.project-title {
+  font-size: 0.95em;
+  line-height: 1.45;
+  color: var(--ink);
+}
 
-.project summary::before {
-  content: '▶';
-  font-size: 0.42em;
-  color: var(--light);
+.project-link {
   flex-shrink: 0;
-  transition: transform 0.25s ease, color 0.2s;
-  display: inline-block;
-  position: relative;
-  top: -1px;
+  color: var(--light);
+  text-decoration: none;
+  transition: color 0.2s, transform 0.2s;
+  margin-top: 1px;
 }
 
-.project summary:hover { color: var(--muted); }
-.project summary:hover::before { color: var(--muted); }
-
-details[open] > summary::before {
-  transform: rotate(90deg);
+.project-link:hover {
   color: var(--ink);
+  transform: translate(1px, -1px);
 }
 
-.project-body {
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  transition: max-height 0.42s ease, opacity 0.3s ease;
-}
-
-details[open] .project-body {
-  max-height: 350px;
-  opacity: 1;
-}
-
-.project-body p {
-  font-size: 0.9em;
+.project-desc {
+  font-size: 0.88em;
   line-height: 1.78;
   color: var(--muted);
-  padding-bottom: 1em;
   font-style: italic;
 }
 
